@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit git-r3
+inherit git-r3 toolchain-funcs
 
 DESCRIPTION="A small tool for X11 that writes the color value on your screen at the cursor position to stdout, in RGB."
 HOMEPAGE="https://github.com/ym1234/colorpicker"

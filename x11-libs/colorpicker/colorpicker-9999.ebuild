@@ -11,10 +11,16 @@ EGIT_REPO_URI="https://github.com/ym1234/colorpicker.git"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86 ~arm ~arm64"
 
 DEPEND="x11-libs/libX11"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	default
+	sed -e "s/cc/$(tc-getCC)/" -i Makefile || die
+}
+
 
 src_install() {
 	dobin colorpicker

@@ -17,14 +17,14 @@ IUSE="+local lyrics +notify search"
 
 
 RDEPEND="
-	media-sound/mpg123[${PYTHON_USEDEP}]
-	dev-python/fuzzywuzzy[${PYTHON_USEDEP}]
+	media-sound/mpg123
+	dev-python/fuzzywuzzy
 "
 PDEPEND="
 	local? ( net-misc/aria2 )
-	lyrics? ( dev-python/dbus-python[${PYTHON_USEDEP}] dev-python/QtPy[${PYTHON_USEDEP}] dev-qt/qtcore sys-apps/dbus )
+	lyrics? ( dev-python/dbus-python dev-python/QtPy dev-qt/qtcore sys-apps/dbus )
 	notify? ( x11-libs/libnotify )
-	search? ( dev-python/python-levenshtein[${PYTHON_USEDEP}] )
+	search? ( dev-python/python-levenshtein )
 "
 DEPEND="
 	${RDEPEND}

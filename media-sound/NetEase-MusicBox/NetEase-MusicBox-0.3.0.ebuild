@@ -32,7 +32,3 @@ DEPEND="
 	${PDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 "
-
-python_install(){
-	distutils-r1_python_install
-}
